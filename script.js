@@ -544,14 +544,14 @@ const projectDetails = {
     `
   },
   'brain-tumor': {
-    title: 'Brain Tumor Detection using CNN-VGG16',
+    title: 'Brain Neoplasm Detection using CNN & VGG-16',
     content: `
       <h3>Project Overview</h3>
-      <p>Led the development of a deep learning system using Convolutional Neural Networks (CNN) with the VGG-16 architecture to detect and classify brain tumors from MRI images with high accuracy.</p>
+      <p>Led the development of a deep learning system using Convolutional Neural Networks (CNN) with the VGG-16 architecture to detect and classify brain neoplasms from MRI images with high accuracy.</p>
       
       <h3>Key Features</h3>
       <ul>
-        <li>Automated brain tumor detection and classification from MRI scans</li>
+        <li>Automated brain neoplasm detection and classification from MRI scans</li>
         <li>Advanced image preprocessing pipeline for optimal model performance</li>
         <li>Transfer learning implementation using pre-trained VGG-16 model</li>
         <li>Comprehensive performance evaluation with accuracy, precision, and recall metrics</li>

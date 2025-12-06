@@ -878,8 +878,9 @@ nav {
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -888,12 +889,16 @@ nav {
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
 }
 
 .info-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   padding: 1.5rem;
   background: var(--surface);
@@ -903,6 +908,7 @@ nav {
   transition: all 0.3s ease;
   width: 100%;
   max-width: 550px;
+  text-align: center;
 }
 
 .info-item:hover {
@@ -917,6 +923,10 @@ nav {
   color: var(--primary);
   min-width: 30px;
   text-shadow: var(--glow);
+}
+
+.info-details {
+  text-align: center;
 }
 
 .info-details h3 {
