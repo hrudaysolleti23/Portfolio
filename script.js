@@ -109,8 +109,16 @@ window.addEventListener("scroll", flipAndUnflipFirstCard);
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
+// Create overlay element
+const navOverlay = document.createElement('div');
+navOverlay.className = 'nav-overlay';
+document.body.appendChild(navOverlay);
+
 mobileMenuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+  navOverlay.classList.toggle("active");
+  document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+  
   const icon = mobileMenuBtn.querySelector("i");
   if (navLinks.classList.contains("active")) {
     icon.classList.remove("ri-menu-line");
@@ -121,20 +129,22 @@ mobileMenuBtn.addEventListener("click", () => {
   }
 });
 
-// Close mobile menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-    navLinks.classList.remove("active");
-    const icon = mobileMenuBtn.querySelector("i");
-    icon.classList.remove("ri-close-line");
-    icon.classList.add("ri-menu-line");
-  }
+// Close mobile menu when clicking overlay
+navOverlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  navOverlay.classList.remove("active");
+  document.body.style.overflow = "auto";
+  const icon = mobileMenuBtn.querySelector("i");
+  icon.classList.remove("ri-close-line");
+  icon.classList.add("ri-menu-line");
 });
 
 // Close mobile menu when clicking a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
+    navOverlay.classList.remove("active");
+    document.body.style.overflow = "auto";
     const icon = mobileMenuBtn.querySelector("i");
     icon.classList.remove("ri-close-line");
     icon.classList.add("ri-menu-line");
