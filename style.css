@@ -898,17 +898,17 @@ nav {
 .info-item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   background: var(--surface);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border);
   border-radius: 15px;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 550px;
-  text-align: center;
+  max-width: 600px;
+  text-align: left;
 }
 
 .info-item:hover {
@@ -919,14 +919,20 @@ nav {
 }
 
 .info-icon {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--primary);
-  min-width: 30px;
+  min-width: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-shadow: var(--glow);
+  flex-shrink: 0;
 }
 
 .info-details {
-  text-align: center;
+  text-align: left;
+  flex: 1;
 }
 
 .info-details h3 {
@@ -1399,7 +1405,11 @@ nav {
   }
 
   .contact-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .info-item {
+    max-width: 100%;
   }
 
   .skills-grid {
