@@ -32,8 +32,8 @@ class ShootingStarsBackground {
         maxSpeed: 35,
         minDelay: 1000,
         maxDelay: 3000,
-        starWidth: 6,
-        starHeight: 1
+        starWidth: 4,
+        starHeight: 0.8
       },
       {
         starColor: '#F5F5F5',
@@ -42,8 +42,8 @@ class ShootingStarsBackground {
         maxSpeed: 25,
         minDelay: 2000,
         maxDelay: 4000,
-        starWidth: 5,
-        starHeight: 1
+        starWidth: 3.5,
+        starHeight: 0.8
       },
       {
         starColor: '#FFFFFF',
@@ -52,8 +52,8 @@ class ShootingStarsBackground {
         maxSpeed: 40,
         minDelay: 1500,
         maxDelay: 3500,
-        starWidth: 7,
-        starHeight: 1
+        starWidth: 4.5,
+        starHeight: 0.8
       }
     ];
     
@@ -266,7 +266,7 @@ class ShootingStarsBackground {
       this.ctx.fillRect(-width/2, -height/2, width, height);
       
       // Add glow effect
-      this.ctx.shadowBlur = 8; // Increased glow for better visibility
+      this.ctx.shadowBlur = 4; // Reduced glow for subtlety
       this.ctx.shadowColor = config.starColor;
       this.ctx.fillRect(-width/2, -height/2, width, height);
       
