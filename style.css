@@ -79,7 +79,7 @@ body::before {
   z-index: 1;
 }
 
-#asmr-canvas {
+#shooting-stars-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@ body::before {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 1.0;
 }
 
 .custom-cursor {
@@ -741,7 +741,8 @@ nav {
 
 .timeline-line {
   position: absolute;
-  left: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
   bottom: 0;
   width: 3px;
@@ -758,7 +759,8 @@ nav {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
   width: 22px;
   height: 22px;
@@ -770,8 +772,8 @@ nav {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.2); }
 }
 
 .timeline-content {
